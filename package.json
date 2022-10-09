@@ -1,0 +1,23 @@
+{
+  "name": "webd-midterm-project",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "compile:sass": "sass sass:css -w"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/IyoTodaka/WebD-Midterm-Project.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/IyoTodaka/WebD-Midterm-Project/issues"
+  },
+  "homepage": "https://github.com/IyoTodaka/WebD-Midterm-Project#readme",
+  "devDependencies": {
+    "sass": "^1.55.0"
+  }
+}
