@@ -1,3 +1,127 @@
-.bg {
-    @include bg-img($path: 'kabe2.jpeg');
+@use 'layout' as m;
+
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+
+@mixin bg-img($path, $size: cover, $pos:center, $repeat:no-repeat) {
+    background-image: url($path);
+    background-size: $size;
+    background-position: $pos;
+    background-repeat: $repeat;
+    
+  }
+
+ header {
+    @include bg-img($path: '../images/header.jpeg');
+    width:100%;
+    height: 80vh;
+
+  }
+
+ .items{
+    display:flex;
+    list-style:none;
+    flex-wrap: wrap;
+    margin: 5% 0;
+   
+    
+
+    li{
+        position: relative;
+        width: 29%;
+        border: 1px solid #000000;
+        border-radius:5% 5%;
+       
+        margin: 2%;
+      
+        text-align: center;
+
+        img{
+            width: auto;
+            height: 50vh;
+            box-sizing: border-box;
+            text-align: center;
+            // padding: 5%;
+            margin: 2%;
+            justify-content: space-evenly;
+           
+        }
+
+    }
+ }
+
+
+ .hover_t_1{
+    position: relative;
+    img{
+      display: block;
+      width: 100%;
+      transition: .3s;
+    }
+    figcaption{
+      opacity: 0;
+      transition: .3s;
+      position: absolute;
+      left: 0;
+      top:0;
+      width: 100%;
+      height: 100%;
+      color: #fff;
+      .txt_box{
+        position: relative;
+        width: 100%;
+        height: 100%;
+        p{
+          width: 100%;
+          text-align: center;
+          position: absolute;
+          left: 50%;
+          top:50%;
+          transform: translate(-50%,-50%);
+        }
+      }
+    }
+    &:hover{
+      figure{
+        img{
+          filter: brightness(60%);
+        }
+        figcaption{
+          opacity: 1;
+        }
+      }
+    }
+  }
+  
+.footer {
+    width: 100%;
+    background-color: #61B0FA;
+    color: rgb(196, 10, 10);
+    text-align: center;
+    padding: 15px 0 5px;
+
+    position: absolute;
+    bottom: 0;
+
+
+    p{
+        color: rgb(244, 188, 47);
+        margin: 1% 1% 0% 1%;
+    }
+}
+
+footer img{
+    max-height: 5vh;
+    margin: 0  0 0 10vh;
+  }
+
+  .body_wapper{
+    position: relative;
+    padding-bottom: 60px;
+    box-sizing: border-box;
+    min-height: 100vh;
   }
