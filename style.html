@@ -10,12 +10,40 @@
     <title>WebD2-Midterm-Project</title>
 </head>
 <body>
-    <div class="body_wapper">
-        <header>
-            <div class="cart"></div>
-            <div class="bg_text">
-                <!-- Super M SHOP -->
+    <template id="cart_item_template">
+        <li>
+            <img src="../images/kinoko.jpeg">
+            <div class="right">
+                <h4>SuperMashroom</h4>
+                <br>
+                <p>Price:</p>
+                <p>$</p>
+                <p id="price">5</p>
+                <p>×</p>
+                <p id ="count">0</p>
             </div>
+            <a id="deleteIcon" href="">
+                <img class="gomi" src="../images/gomi1.jpeg">
+            </a>
+        </li> 
+    </template>
+    
+    <div class="body_wapper">
+        <ul id="cart" class="cart">
+
+            <li>
+                <h3>TOTAL</h3>
+                <h4>&nbsp;$</h4>
+                <h4 id="total_price">0</h4>
+            </li>
+        </ul>
+        <header>
+            <div class="icons">
+                <a href="">
+                        <img class="icon" src="images/cart.jpg">
+                </a>
+            </div>
+            <div id = "total_counter" class="total_counter"></div>
         </header>
         <section class="items_wapper">
             <ul class="items">
@@ -29,7 +57,7 @@
                         <div class="txt_wrap">
                             <div class="txt_box">
                                 <p><b>Super Mushroom</b></p>
-                                <p><b>$5</b></p>
+                                <p><b>$10</b></p>
                             </div>
                         </div>
                     </a>
@@ -104,7 +132,7 @@
                         <div class="txt_wrap">
                             <div class="txt_box">
                                 <p><b>Super 1UP Mushroom</p></b>
-                                <p><b>$100</p></b>
+                                <p><b>$99</p></b>
                             </div>
                         </div>
                     </a>
