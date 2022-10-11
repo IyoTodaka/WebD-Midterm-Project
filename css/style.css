@@ -94,6 +94,7 @@ header {
 .footer p {
   color: rgb(244, 188, 47);
   margin: 1% 1% 0% 1%;
+  font-size: medium;
 }
 
 footer img {

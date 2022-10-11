@@ -8,8 +8,14 @@ axios.get(GET_URL).then(({data})=>{
    //itemListにObject型のDataが格納される
 })
 
-function OnLinkClick(){
+function OnLinkClick(id){
     target = document.getElementById("cart")
-    
+    console.log(id)
+
+    for(let item of itemList){
+        if(item == id){
+            console.log(id)
+        }
+    }
 
 }
