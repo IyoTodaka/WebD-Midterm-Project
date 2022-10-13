@@ -58,7 +58,7 @@ function findItemById(itemId){
 
         }
     }
-}
+
 
 function deleteItem(itemId){
    const target_item = cart.children.namedItem(itemId)
